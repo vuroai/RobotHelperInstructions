@@ -44,7 +44,23 @@
             console.log('WebSocket connected to EODHD (US Trades).');
             // *** Subscribe to symbols here! ***
             // Start with a few symbols for testing
-            const symbolsToSubscribe = ['AAPL.US', 'MSFT.US', 'TSLA.US']; // Use EODHD format
+            const symbolsToSubscribe = [
+        	'TSLA.US', 'AAPL.US', 'PLTR.US', 'AMZN.US', 'NVDA.US',
+        	'META.US', 'MSFT.US', 'BAC.US', 'AMD.US', 'AVGO.US',
+        	'GOOG.US', 'CRWD.US', 'UNH.US', 'BA.US', 'JPM.US',
+        	'APP.US', 'WMT.US', 'C.US', 'HOOD.US', 'COST.US',
+        	'LLY.US', 'SPOT.US', 'JNJ.US', 'F.US', 'INTC.US',
+        	'GSPC.INDX', 'DJI.INDX', 'IXIC.INDX', 'RUT.INDX', 'MID.INDX',
+        	'SML.INDX', 'NYA.INDX', 'NDX.INDX', 'W5000.INDX', 'VIX.INDX',
+        	'DJT.INDX', 'DJU.INDX', 'OEX.INDX', 'SPXEW.INDX', // Assuming this is correct for Equal Weight
+        	'NBI.INDX', 'SOX.INDX', 'FNGS.INDX', // Assuming this is correct for FANG+
+        	'SP500G.INDX', // Assuming this is correct for Growth
+        	'SP500V.INDX', // Assuming this is correct for Value
+        	'SP500LV.INDX', // Assuming this is correct for Low Volatility
+        	'RUI.INDX', 'RUA.INDX', 'IXF.INDX',
+        	'SPDAUDP.INDX', // Assuming this is correct for Dividend Aristocrats
+        	'SP500HD.INDX' // Assuming this is correct for High Dividend
+	    ]; // Use EODHD format
             wsClient.send(JSON.stringify({
                 action: 'subscribe',
                 symbols: symbolsToSubscribe.join(',')
