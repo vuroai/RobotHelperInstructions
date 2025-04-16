@@ -71,6 +71,7 @@
         });
 
         wsClient.on('message', (data) => {
+            console.log('WS message:', data.toString());
             try {
                 const messageString = data.toString();
                 // Handle potential non-JSON messages (like acknowledgements)
